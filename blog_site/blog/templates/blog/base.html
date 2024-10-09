@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>blog-site</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <style>
+   
+            body {
+              background-color: #c492ab; 
+            }
+          </style>       
+    </head>
+
+    <body>
+        <nav class="navbar is-black">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item text-white font-weight-bold"><h4>Welcome to my awesome Blog</h4></a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item text-white font-weight-bold" href="#">About</a>
+                    <a class="navbar-item text-white font-weight-bold" href="#">Policy</a>
+                    <a class="navbar-item text-white font-weight-bold" href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item text-black font-weight-bold">My Blog</a>
+            </div>
+
+        </nav>
+
+        <section class="section">
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>      
+    </body>
+</html>

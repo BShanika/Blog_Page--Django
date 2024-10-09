@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<center>
+    <img src="https://thumbs.dreamstime.com/z/blogging-blog-word-coder-coding-using-laptop-page-keyboard-notebook-blogger-internet-computer-marketing-opinion-interface-layout-80864637.jpg?ct=jpeg"width="1400" height="600" >
+</center>
+    <hr>
+    {% for post in posts %}
+        <div class="post block">
+            <h2 class="subtitle" style="color: #f3efef;">{{ post.title }}</h2>
+
+            <small style="color: #f5f2f2;">Posted at {{ post.date_added }}</small>
+
+            <p style="color: #4d0322;">{{ post.intro }}</p>
+
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
+        </div>
+    <hr>   
+    {% endfor %}
+{% endblock %}
+
